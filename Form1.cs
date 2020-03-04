@@ -81,7 +81,7 @@ namespace addressbook
                     cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text.ToUpper());
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text.ToLower());
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro incluído com sucesso...");
+                    MessageBox.Show("Registro incluído com sucesso!");
                 }
                 catch(Exception ex)
                 {
@@ -162,7 +162,7 @@ namespace addressbook
         {
             if (ID != 0)
             {
-                if (MessageBox.Show("Deseja Deletar este registro ?", "Agenda", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja deletar este registro?", "Agenda", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     try
                     {
@@ -170,7 +170,7 @@ namespace addressbook
                         con.Open();
                         cmd.Parameters.AddWithValue("@id", ID);
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("registro deletado com sucesso...!");
+                        MessageBox.Show("Registro deletado com sucesso!");
                     }
                     catch (Exception ex)
                     {
@@ -186,7 +186,7 @@ namespace addressbook
             }
             else
             {
-                MessageBox.Show("Selecione um registro para deletar");
+                MessageBox.Show("Escolha um registro para deletar");
             }
         }
     }
